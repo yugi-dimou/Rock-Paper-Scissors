@@ -1,0 +1,29 @@
+body{
+    background-image: url( 'https://www.cs.utexas.edu/~byoung/cs303e/rockpaperscissors2.jpg');
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+}
+
+.container button{
+    font-size: large;
+    padding: 15px 30px;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+#results, #choices, #score {
+    font-size:xx-large;
+    color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+
+}
