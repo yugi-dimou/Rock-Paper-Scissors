@@ -46,9 +46,6 @@
             humanScore=0;
             computerScore=0;
              
-
-
-    
         })
 
         const resultsDiv = document.querySelector('#results');
@@ -121,12 +118,13 @@
         }
         if (humanScore===5){
             resultsDiv.textContent = "Congratulations, you won the game";
+            document.getElementById("choices").innerHTML=""
             
 
             
         }else if (computerScore===5){
             resultsDiv.textContent = "You lost....The game is over!";
-            
+            document.getElementById("choices").innerHTML=""
 
         }
     }
