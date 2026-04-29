@@ -11,18 +11,21 @@
     <button id="rock" >Rock</button>
     <button id="paper">Paper</button>
     <button id="scissors" >Scissors</button>
+    <button id="reset">Reset</button>
      </div>
 
      
     <div id="results"></div>
     <div id="choices"></div>
     <div id="score">You: 0 vs Computer: 0 </div>
+    
    
     
     <script>
         const rockBtn = document.getElementById('rock');
         const paperBtn = document.getElementById('paper');
         const scrsBtn = document.getElementById('scissors');
+        const resetBtn = document.getElementById('reset');
         let humanScore = 0;
         let computerScore = 0;
              
@@ -36,6 +39,17 @@
         scrsBtn.addEventListener("click",() => {
              const computerChoice=getComputerChoice()
              playRound('scissors',computerChoice)});
+        resetBtn.addEventListener("click", () => {
+            document.getElementById("results").innerHTML="";
+            document.getElementById("choices").innerHTML="";
+            document.getElementById("score").innerText="You :0 vs Computer: 0";
+            humanScore=0;
+            computerScore=0;
+             
+
+
+    
+        })
 
         const resultsDiv = document.querySelector('#results');
         const scoreDiv = document.querySelector('#score');
@@ -108,8 +122,12 @@
         if (humanScore===5){
             resultsDiv.textContent = "Congratulations, you won the game";
             
+
+            
         }else if (computerScore===5){
-            resultsDiv.textContent = "You lost...."
+            resultsDiv.textContent = "You lost....The game is over!";
+            
+
         }
     }
     
